@@ -1,27 +1,57 @@
-# TodoApp
+# Angular To-Do App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+This is a To-Do application built with Angular and Tailwind CSS.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Add Tasks**: Quickly add new tasks with optional descriptions.
+- **Edit Tasks**: Modify existing tasks and their descriptions.
+- **Delete Tasks**: Remove tasks that are no longer needed.
+- **Local Storage**: Tasks are saved in the browser's local storage, ensuring data persistence even after a page reload.
+- **Responsive Design**: The app is responsive and works well on both desktop and mobile devices.
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular 18**: A popular framework for building web applications.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **Local Storage**: Browser's local storage for data persistence.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **Clone the repository**:
 
-## Running unit tests
+```bash
+git clone https://github.com/therajusah/Todo-App.git
+cd todo-app
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Install the dependencies**:
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Run the application**:
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. **Open your browser and navigate to** `http://localhost:4200`.
+
+## Usage
+
+- **To add a new task**:
+
+  - Enter the task text in the input field.
+  - Optionally, enter a description in the textarea below the input field.
+  - Click the "Add" button to add the task to the list.
+
+- **To edit a task**:
+
+  - Click the "Edit" button next to the task you want to edit.
+  - Modify the text and description in the input fields.
+  - Click the "Update" button to save the changes.
+
+- **To delete a task**:
+  - Click the "Delete" button next to the task you want to remove.

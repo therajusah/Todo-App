@@ -1,0 +1,53 @@
+<div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">
+    <div class="p-8 bg-white shadow-lg rounded-lg w-full max-w-md flex flex-col items-center">
+      <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Add Your Todo</h2>
+      <div class="w-full mb-6">
+        <input 
+          [(ngModel)]="newTodoText" 
+          placeholder="Add a new to-do" 
+          class="p-3 border border-gray-300 rounded-lg w-full transition-colors duration-200 focus:border-blue-500 focus:outline-none"
+        />
+        <textarea
+          [(ngModel)]="newTodoDescription"
+          placeholder="Add a description"
+          rows="3"
+          class="mt-2 p-3 border border-gray-300 rounded-lg w-full transition-colors duration-200 focus:border-blue-500 focus:outline-none"
+        ></textarea>
+        <button 
+          (click)="addTodo()" 
+          class="mt-2 p-2 bg-green-500 text-white rounded-lg w-full hover:bg-green-600 transition-colors duration-200 text-xl py-2"
+        >
+          {{ editingTodo ? 'Update' : 'Add' }}
+        </button>
+      </div>
+      <div class="bg-gray-50 p-4 rounded-lg shadow-inner w-full">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Your Tasks</h3>
+        <ul class="space-y-2">
+          <li 
+            *ngFor="let todo of todos" 
+            class="p-4 border border-gray-300 rounded-lg flex flex-col transition-transform duration-300 transform hover:scale-105 hover:bg-gray-100"
+          >
+            <div class="flex flex-col mb-2">
+              <span class="text-gray-700 font-bold">{{ todo.text }}</span>
+              <span class="text-gray-500 text-sm">{{ todo.description || 'No description' }}</span>
+            </div>
+            <div class="flex space-x-2">
+              <button 
+                (click)="editTodo(todo)" 
+                class="p-1 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors duration-200 text-xs"
+              >
+                Edit
+              </button>
+              <button 
+                (click)="deleteTodo(todo.id)" 
+                class="p-1 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors duration-200 text-xs"
+              >
+                Delete
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
